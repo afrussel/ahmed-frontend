@@ -1,16 +1,25 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ScrollReveal from "@/components/ScrollReveal";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Play, X } from "lucide-react";
+import gsap from "gsap";
 
 const YOUTUBE_VIDEO_ID = "2VhFwKz8a8I";
 
 export default function HeroSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    // GSAP refs
+    const headlineRef = useRef<HTMLHeadingElement>(null);
+    const subheadlineRef = useRef<HTMLParagraphElement>(null);
+    const buttonsRef = useRef<HTMLDivElement>(null);
+    const playButtonRef = useRef<HTMLButtonElement>(null);
+    const thumbnailRef = useRef<HTMLDivElement>(null);
+    const sectionRef = useRef<HTMLElement>(null);
+
+    // ESC key handler for modal
     useEffect(() => {
         const handleEsc = (e: KeyboardEvent) => {
             if (e.key === "Escape") setIsModalOpen(false);
@@ -25,62 +34,136 @@ export default function HeroSection() {
         };
     }, [isModalOpen]);
 
-    return (
-        <section id="home" className="relative pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden bg-[#050505]">
+    // GSAP Animations - Wrapped in gsap.context() for React safety
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // 1. Headline: Slide up + fade in
+            if (headlineRef.current) {
+                gsap.from(headlineRef.current, {
+                    y: 60,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power4.out",
+                    delay: 0.2
+                });
+            }
 
+            // 2. Subheadline: Fade in with delay
+            if (subheadlineRef.current) {
+                gsap.from(subheadlineRef.current, {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.5
+                });
+            }
+
+            // 3. Buttons: Pop in effect
+            if (buttonsRef.current) {
+                gsap.from(buttonsRef.current, {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.6,
+                    ease: "back.out(1.7)",
+                    delay: 0.7
+                });
+            }
+
+            // 4. Play Button: Continuous heartbeat pulse
+            if (playButtonRef.current) {
+                gsap.to(playButtonRef.current, {
+                    scale: 1.08,
+                    duration: 1.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "power1.inOut"
+                });
+            }
+
+            // 5. Thumbnail: Subtle float effect
+            if (thumbnailRef.current) {
+                gsap.to(thumbnailRef.current, {
+                    y: 10,
+                    duration: 3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "power1.inOut",
+                    delay: 1
+                });
+            }
+        }, sectionRef);
+
+        // Cleanup: Revert all GSAP animations on unmount
+        return () => ctx.revert();
+    }, []);
+
+    return (
+        <section
+            ref={sectionRef}
+            id="home"
+            className="relative pt-24 pb-20 md:pt-50 md:pb-24 overflow-hidden bg-[#050505]"
+        >
             {/* Background Effects */}
             <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-[#1e3a8a]/60 via-[#0a192f]/40 to-transparent pointer-events-none" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Top Content */}
-                <ScrollReveal direction="up" className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                {/* Top Content - ScrollReveal removed, GSAP handles animations */}
+                <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
 
                     {/* Countdown Badge */}
-                    <div className="inline-flex items-center gap-2 bg-[#111] border border-white/10 px-4 py-1.5 rounded-full mb-8">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
-                        </span>
+                    <div className="badge-glow mb-8 inline-flex items-center gap-2">
+                      <span className="relative flex h-2 w-2 shrink-0">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
+                      </span>
                         <CountdownTimer />
                     </div>
 
-                    {/* Headline */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] mb-4 tracking-tight">
+                    {/* Headline - GSAP Animated */}
+                    <h1
+                        ref={headlineRef}
+                        className="hero-title tracking-tight mb-4"
+                    >
                         Master Focus & Get <br className="hidden md:block" />
                         More Done in Less Time
                     </h1>
 
-                    {/* Subheadline */}
-                    <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
-                        A step-by-step system to eliminate procrastination, train your brain for deep work, and boost productivity effortlessly.
+                    {/* Subheadline - GSAP Animated */}
+                    <p
+                        ref={subheadlineRef}
+                        className="hero-subheadline"
+                    >
+                        A step-by-step system to eliminate procrastination, train your <br className="hidden md:block" /> brain for deep work, and boost productivity effortlessly.
                     </p>
 
-                    {/* Buttons */}
-                    <div className="flex flex-wrap items-center justify-center gap-4">
+                    {/* Buttons - GSAP Animated */}
+                    <div ref={buttonsRef} className="flex flex-wrap items-center justify-center gap-4">
                         <Link
                             href="#pricing"
-                            className="px-6 py-3 rounded-full bg-[#3b82f6] text-white text-sm font-semibold hover:bg-[#2563eb] transition-colors"
+                            className="px-6 py-3 rounded-full bg-[#3b82f6] text-white text-sm hover:bg-[#2563eb] transition-colors"
                         >
                             Enroll now
                         </Link>
                         <Link
                             href="#curriculum"
-                            className="px-6 py-3 rounded-full bg-[#1A1A1A] border border-white/10 text-white text-sm font-medium hover:bg-[#252525] transition-colors"
+                            className="px-6 py-3 rounded-full bg-[#1A1A1A] border border-white/10 text-white text-sm hover:bg-[#252525] transition-colors"
                         >
                             Curriculum
                         </Link>
                     </div>
-                </ScrollReveal>
+                </div>
 
-                {/* Video Thumbnail */}
-                <ScrollReveal direction="scale" delay={200} className="relative max-w-5xl mx-auto">
+                {/* Video Thumbnail - GSAP Animated (ScrollReveal removed) */}
+                <div className="relative max-w-5xl mx-auto">
                     <div
+                        ref={thumbnailRef}
                         className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 group cursor-pointer"
                         onClick={() => setIsModalOpen(true)}
                     >
                         <Image
-                            src="/images/hero-thumbnail.jpg" // আপনার থাম্বনেইল ইমেজ
+                            src="/images/hero-banner.png"
                             alt="Deep Work course preview - Learn to master focus and eliminate distractions"
                             className="w-full aspect-video object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                             width={1280}
@@ -92,10 +175,11 @@ export default function HeroSection() {
                         {/* Dark Overlay */}
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
 
-                        {/* Play Button */}
+                        {/* Play Button - GSAP Heartbeat */}
                         <div className="absolute inset-0 flex items-center justify-center">
                             <button
-                                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg animate-heartbeat"
+                                ref={playButtonRef}
+                                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
                                 aria-label="Play course preview video"
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -106,7 +190,7 @@ export default function HeroSection() {
                             </button>
                         </div>
                     </div>
-                </ScrollReveal>
+                </div>
             </div>
 
             {/* Full-Screen Video Modal */}

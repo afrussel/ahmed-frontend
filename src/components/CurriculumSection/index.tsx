@@ -60,9 +60,14 @@ export default function CurriculumSection() {
                 {/* Badge & Heading */}
                 <ScrollReveal direction="up">
                     <div className="flex justify-center mb-6">
-                        <div className="inline-flex items-center gap-2 bg-[#111] border border-white/10 px-4 py-1.5 rounded-full">
-                            <span className="h-2 w-2 rounded-full bg-[#3b82f6]" />
-                            <span className="text-xs md:text-sm text-gray-300 font-medium">Course Curriculum</span>
+                        <div className="badge-glow">
+                            <span className="relative flex h-2 w-2 shrink-0">
+                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
+                               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
+                            </span>
+                            <span className="text">
+                              Course Curriculum
+                            </span>
                         </div>
                     </div>
                     <h2 className="text-3xl md:text-4xl text-white text-center leading-tight mb-12 max-w-2xl mx-auto">

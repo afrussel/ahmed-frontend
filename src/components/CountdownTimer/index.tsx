@@ -27,7 +27,7 @@ export default function CountdownTimer() {
     }, []);
 
     return (
-        <span className="text-xs md:text-sm text-gray-300 font-medium">
+        <span className="text">
           30% off until {timeLeft.d}d : {timeLeft.h}h : {timeLeft.m}m : {timeLeft.s}s
         </span>
     );

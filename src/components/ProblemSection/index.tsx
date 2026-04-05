@@ -15,9 +15,12 @@ export default function ProblemSection() {
 
                 {/* Badge with ScrollReveal */}
                 <ScrollReveal direction="up">
-                    <div className="inline-flex items-center gap-2 bg-[#111111] border border-white/10 px-3 py-1.5 rounded-full mb-6">
-                        <span className="w-1.5 h-1.5 bg-[#3b82f6] rounded-full"></span>
-                        <span className="text-xs text-gray-300 font-medium">
+                    <div className="badge-glow mb-8">
+                        <span className="relative flex h-2 w-2 shrink-0">
+                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
+                           <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
+                        </span>
+                        <span className="text">
                           Are Distractions Holding You Back?
                         </span>
                     </div>
@@ -26,8 +29,9 @@ export default function ProblemSection() {
                 {/* Main Text with ScrollReveal - SEO: Proper H2 tag */}
                 <ScrollReveal direction="up" delay={100}>
                     <h2 className="text-3xl md:text-5xl text-white leading-tight mb-12">
-                        If you struggle to focus, feel overwhelmed
-                        by endl<span className="text-gray-500 font-normal">ess tasks, or procrastinate instead of making
+                        If you struggle to focus, feel <br className="hidden md:block" /> overwhelmed
+                        by endl<span className="text-gray-500 font-normal">ess tasks, or <br className="hidden md:block" />
+                        procrastinate instead of making <br className="hidden md:block" />
                         progress, you&apos;re not alone. </span>
                     </h2>
                 </ScrollReveal>

@@ -12,9 +12,14 @@ export default function FeaturesTimeline() {
         <section className="bg-[#050505] py-20 md:py-32 px-4">
             <div className="max-w-2xl mx-auto flex flex-col items-center">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-section-dark-icon-bg bg-section-dark-icon-bg px-4 py-1.5 mb-6">
-                    <span className="h-2 w-2 rounded-full bg-section-dark-accent" />
-                    <span className="text-sm text-section-dark-heading">The Deep Work Blueprint</span>
+                <div className="badge-glow mb-8">
+                    <span className="relative flex h-2 w-2 shrink-0">
+                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
+                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
+                    </span>
+                    <span className="text">
+                      The Deep Work Blueprint
+                    </span>
                 </div>
 
                 {/* Heading */}

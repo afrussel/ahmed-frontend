@@ -64,3 +64,87 @@ body {
 .animate-heartbeat {
   animation: heartbeat 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+
+/* Custom Badge Style from Figma */
+/*.badge-glow {
+  background-color: #171B21;
+  border: 1px solid rgba(36, 102, 242, 0.3);
+  box-shadow: 0px 8px 40px 0px rgba(36, 102, 242, 0.1),
+  inset 0px 0px 10px rgba(36, 102, 242, 0.05);
+  border-radius: 12px;
+  padding: 8px 16px;
+}*/
+
+
+.badge-glow {
+  background-color: #171B21;
+  border-radius: 12px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(36, 102, 242, 0.15);
+  box-shadow: 0px 8px 40px rgba(36, 102, 242, 0.06);
+}
+
+.badge-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: radial-gradient(circle at 50% 50%, #2466F2 0%, rgba(36, 102, 242, 0) 100%);
+  -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.badge-glow .text {
+  color: rgba(208, 213, 217, 1);
+  font-size: 15px;
+}
+
+/* =========================================
+   HERO TITLE - Figma Design Tokens
+   ========================================= */
+.hero-title {
+  font-family: 'SF Pro Display Medium';
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #E0E3E5;
+  will-change: transform, opacity;
+}
+/* =========================================
+   SUBHEADLINE / BODY TEXT - Figma Design Tokens
+   ========================================= */
+.hero-subheadline {
+  font-family: 'SF Pro Display Regular';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.063rem;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-align: center;
+  color: #AAAEB2;
+  max-width: 42rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  will-change: transform, opacity;
+}
+
+.slick-box-row {
+  padding-left: 300px;
+}
