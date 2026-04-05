@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Play, X } from "lucide-react";
 
-const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ";
+const YOUTUBE_VIDEO_ID = "2VhFwKz8a8I";
 
 export default function HeroSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);

@@ -168,7 +168,7 @@ export default function TestimonialsSection() {
                                                 />
                                             </div>
                                             <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-4">
-                                                "{t.text}"
+                                                &quot;{t.text}&quot;
                                             </p>
                                             <div className="pt-4 border-t border-white/10">
                                                 <p className="text-white text-sm font-semibold">{t.name}</p>

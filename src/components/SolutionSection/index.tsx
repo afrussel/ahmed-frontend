@@ -71,7 +71,7 @@ export default function SolutionSection() {
                                     The ability to concentrate <br /> deeply is the ultimate <br /> productivity hack
                                 </p>
                                 <h2 className="text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3">
-                                    And fortunately it's <br /> a skill you can train <br /> & develop.
+                                    And fortunately it&apos;s <br /> a skill you can train <br /> & develop.
                                 </h2>
                             </div>
 

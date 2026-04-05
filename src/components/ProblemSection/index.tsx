@@ -28,7 +28,7 @@ export default function ProblemSection() {
                     <h2 className="text-3xl md:text-5xl text-white leading-tight mb-12">
                         If you struggle to focus, feel overwhelmed
                         by endl<span className="text-gray-500 font-normal">ess tasks, or procrastinate instead of making
-                        progress, you're not alone. </span>
+                        progress, you&apos;re not alone. </span>
                     </h2>
                 </ScrollReveal>
 
