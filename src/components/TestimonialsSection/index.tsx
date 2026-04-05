@@ -49,13 +49,15 @@ const testimonials = [
 export default function TestimonialsSection() {
     const sliderRef = useRef<Slider>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [slidesToShow, setSlidesToShow] = useState(4);
+    const [slidesToShow, setSlidesToShow] = useState(4.5); // Default 4.5 cards
 
+    // Handle resize for fractional slides
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 1024) setSlidesToShow(3);
-            else if (window.innerWidth >= 640) setSlidesToShow(2);
-            else setSlidesToShow(1);
+            if (window.innerWidth >= 1280) setSlidesToShow(4.5);
+            else if (window.innerWidth >= 1024) setSlidesToShow(3.5);
+            else if (window.innerWidth >= 768) setSlidesToShow(2.5);
+            else setSlidesToShow(1.5);
         };
         handleResize();
         window.addEventListener("resize", handleResize);
@@ -70,17 +72,21 @@ export default function TestimonialsSection() {
         slidesToScroll: 1,
         arrows: false,
         afterChange: (index: number) => setCurrentSlide(index),
+        // Fractional responsive settings
         responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 640, settings: { slidesToShow: 1 } }
+            { breakpoint: 1280, settings: { slidesToShow: 3.5 } },
+            { breakpoint: 1024, settings: { slidesToShow: 2.5 } },
+            { breakpoint: 768, settings: { slidesToShow: 1.5 } }
         ]
     };
 
-    const isLastSlide = currentSlide >= testimonials.length - Math.ceil(slidesToShow);
+    // Correctly calculate last slide for fractional slides
+    const isLastSlide = currentSlide >= testimonials.length - Math.floor(slidesToShow);
 
     return (
         <section className="bg-[#050505] py-20 md:py-32">
-            <div className="max-w-6xl mx-auto px-4 mb-8">
+            {/* Header Container */}
+            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-8">
                 {/* Badge */}
                 <div className="flex justify-center mb-6">
                     <div className="inline-flex items-center gap-2 bg-[#111] border border-white/10 px-4 py-1.5 rounded-full">
@@ -94,7 +100,7 @@ export default function TestimonialsSection() {
                     Real Results from <br className="hidden md:block" /> Real People
                 </h2>
 
-                {/* Subheading + Navigation Arrows */}
+                {/* Subheading + Arrows */}
                 <div className="flex items-center justify-between">
                     <p className="text-gray-300 text-lg font-medium">
                         Join with 5K other students
@@ -104,7 +110,6 @@ export default function TestimonialsSection() {
                             onClick={() => sliderRef.current?.slickPrev()}
                             disabled={currentSlide === 0}
                             className="h-10 w-10 rounded-full border border-white/10 bg-[#111] flex items-center justify-center text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#222] transition-colors"
-                            aria-label="Previous testimonial"
                         >
                             <ChevronLeft className="h-5 w-5" />
                         </button>
@@ -112,7 +117,6 @@ export default function TestimonialsSection() {
                             onClick={() => sliderRef.current?.slickNext()}
                             disabled={isLastSlide}
                             className="h-10 w-10 rounded-full border border-white/10 bg-[#111] flex items-center justify-center text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#222] transition-colors"
-                            aria-label="Next testimonial"
                         >
                             <ChevronRight className="h-5 w-5" />
                         </button>
@@ -120,20 +124,23 @@ export default function TestimonialsSection() {
                 </div>
             </div>
 
-            <div className="w-full pl-[calc((100vw-672px)/2)] md:pl-[calc((100vw-768px)/2)] lg:pl-[calc((100vw-1440px)/2)] overflow-visible">
+            {/* Slider Section - Left Aligned, Right Overflow */}
+            <div className="w-full pl-[calc((100vw-1280px)/2)] md:pl-[calc((100vw-1280px)/2)] lg:pl-[calc((100vw-1440px)/2)] overflow-visible">
+                {/* Custom CSS to fix slick slider height and padding issues */}
                 <div className="testimonials-slider [&_.slick-list]:!p-0 [&_.slick-slide]:!h-auto [&_.slick-slide>div]:!h-full">
                     <Slider ref={sliderRef} {...settings}>
                         {testimonials.map((t, i) => (
                             <div key={i} className="px-2 h-full">
                                 <div className="h-[340px] md:h-[380px] rounded-2xl overflow-hidden relative bg-[#0f0f0f] border border-white/10 group">
                                     {t.hasVideo && t.image ? (
+                                        /* Video Card */
                                         <div className="relative h-full">
                                             <Image
                                                 src={t.image}
                                                 alt={`${t.name} video testimonial`}
                                                 fill
                                                 className="object-cover"
-                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                                sizes="(max-width: 768px) 100vw, 33vw"
                                                 unoptimized
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -148,6 +155,7 @@ export default function TestimonialsSection() {
                                             </div>
                                         </div>
                                     ) : (
+                                        /* Text Card */
                                         <div className="flex flex-col h-full p-5">
                                             <div className="mb-4">
                                                 <Image
