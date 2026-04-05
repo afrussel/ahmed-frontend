@@ -13,8 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+    title: "The Deep Work Blueprint | Master Focus & Boost Productivity",
+    description: "Master focus & eliminate procrastination with The Deep Work Blueprint. 6h+ video course, templates & live Q&As. Join 5K+ students. Save 30% now!",
+    keywords: ["deep work", "focus course", "productivity", "eliminate procrastination", "time management"],
+    authors: [{ name: "PPA" }],
+    openGraph: {
+        title: "The Deep Work Blueprint | Master Focus & Boost Productivity",
+        description: "Master focus & eliminate procrastination with The Deep Work Blueprint. 6h+ video course, templates & live Q&As.",
+        url: "https://yourdomain.com",
+        siteName: "PPA - Deep Work Blueprint",
+        locale: "en_US",
+        type: "website",
+    },
 };
 
 export default function RootLayout({
