@@ -1,41 +1,50 @@
-"use client";
-import { Target, Brain, Zap, TrendingUp } from 'lucide-react';
+import { Settings, Brain, Zap, Link } from "lucide-react";
 
-const features = [
-    { icon: Target, text: "Develop laser-sharp focus & eliminate distractions." },
+const timelineItems = [
+    { icon: Settings, text: "Develop laser-sharp focus & eliminate distractions." },
     { icon: Brain, text: "Master deep work techniques for smarter productivity." },
     { icon: Zap, text: "Overcome procrastination & get more done." },
-    { icon: TrendingUp, text: "Build lasting habits for long-term success." }
+    { icon: Link, text: "Build lasting habits for long-term success." },
 ];
 
 export default function FeaturesTimeline() {
     return (
         <section className="bg-[#050505] py-20 md:py-32 px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-                <div className="inline-flex items-center gap-2 bg-[#111] border border-white/10 px-3 py-1.5 rounded-full mb-6">
-                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                    <span className="text-xs text-gray-300 font-medium">The Deep Work Blueprint</span>
+            <div className="max-w-2xl mx-auto flex flex-col items-center">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 rounded-full border border-section-dark-icon-bg bg-section-dark-icon-bg px-4 py-1.5 mb-6">
+                    <span className="h-2 w-2 rounded-full bg-section-dark-accent" />
+                    <span className="text-sm text-section-dark-heading">The Deep Work Blueprint</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+
+                {/* Heading */}
+                <h2 className="text-3xl md:text-4xl text-section-dark-heading text-center leading-tight mb-16">
                     A self-paced, results-driven course designed to help you
                 </h2>
-            </div>
 
-            <div className="max-w-2xl mx-auto relative">
-                {/* Vertical Line */}
-                <div className="absolute left-[19px] md:left-6 top-4 bottom-4 w-[1px] bg-gradient-to-b from-blue-500/50 via-blue-500/20 to-transparent"></div>
+                {/* Timeline */}
+                <div className="relative pl-8">
+                    {/* Vertical line */}
+                    <div className="absolute left-0 top-0 bottom-0 w-px bg-section-dark-icon-bg" />
 
-                <div className="space-y-12">
-                    {features.map((item, index) => (
-                        <div key={index} className="flex gap-6 items-start relative">
-                            <div className="relative z-10 w-10 h-10 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center flex-shrink-0 shadow-lg">
-                                <item.icon size={18} className="text-blue-500" />
+                    <div className="flex flex-col gap-14">
+                        {timelineItems.map((item, index) => (
+                            <div key={index} className="relative">
+                                {/* Dot on line */}
+                                <div className="absolute -left-8 top-4 -translate-x-1/2 h-3 w-3 rounded-full bg-section-dark-accent" />
+
+                                {/* Icon */}
+                                <div className="h-12 w-12 rounded-full bg-section-dark-icon-bg flex items-center justify-center mb-3">
+                                    <item.icon className="h-5 w-5 text-section-dark-foreground" />
+                                </div>
+
+                                {/* Text */}
+                                <p className="text-section-dark-foreground text-base leading-relaxed max-w-xs">
+                                    {item.text}
+                                </p>
                             </div>
-                            <div className="pt-2">
-                                <p className="text-gray-200 text-lg font-medium leading-relaxed">{item.text}</p>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
