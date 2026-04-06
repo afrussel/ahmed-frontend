@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
@@ -32,10 +33,14 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <Link href="#" className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                            <div className="w-3.5 h-3.5 bg-[#050505] rounded-full"></div>
-                        </div>
-                        <span className="text-xl font-bold text-white tracking-tight">PPA</span>
+                        <Image
+                            src="/images/logo.svg"
+                            alt="PPA Logo"
+                            width={120}
+                            height={40}
+                            className="h-8 w-auto"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Nav Links */}

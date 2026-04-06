@@ -62,7 +62,7 @@ export default function TestimonialsSection() {
     };
 
     return (
-        <section className="bg-[#050505] py-20 md:py-32">
+        <section id="testimonials" className="bg-[#050505] py-20 md:py-32">
             {/* Header Section */}
             <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-8">
                 <div className="flex justify-center mb-6">

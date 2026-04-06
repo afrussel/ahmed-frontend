@@ -104,6 +104,9 @@ export default function HeroSection() {
             id="home"
             className="relative pt-24 pb-20 md:pt-50 md:pb-24 overflow-hidden bg-[#050505]"
         >
+            {/* Horizontal accent line */}
+            <div className="absolute top-24 left-0 right-0 glow-line" />
+
             {/* Background Effects */}
             <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-[#1e3a8a]/60 via-[#0a192f]/40 to-transparent pointer-events-none" />
 

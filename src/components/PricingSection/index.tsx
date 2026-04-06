@@ -4,7 +4,7 @@ import CountdownTimer from "@/components/CountdownTimer";
 
 export default function PricingSection() {
     return (
-        <section className="bg-[#050505] py-20 px-4">
+        <section id="pricing" className="bg-[#050505] py-20 px-4">
             {/* Parent: Centers the exact width block, stacks on mobile */}
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 justify-center items-start">
 
@@ -55,7 +55,7 @@ export default function PricingSection() {
                         </p>
 
                         {/* Features List */}
-                        <ul className="space-y-4 mb-8">
+                        <ul className="space-y-8 price-box">
                             {[
                                 "6h of videos - Step-by-step deep work strategies.",
                                 "Templates & Trackers - Stay on track effortlessly.",

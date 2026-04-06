@@ -36,6 +36,10 @@
 
 /* Custom font utility classes */
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'SF Pro Display Medium', sans-serif;
 }
@@ -112,6 +116,11 @@ body {
   font-size: 15px;
 }
 
+.glow-line {
+  background: linear-gradient(90deg, transparent, #306ee8, transparent);
+  height: 1px;
+}
+
 /* =========================================
    HERO TITLE - Figma Design Tokens
    ========================================= */
@@ -147,4 +156,9 @@ body {
 
 .slick-box-row {
   padding-left: 300px;
+}
+
+.price-box {
+  margin-top: 72px;
+  margin-bottom: 72px;
 }
