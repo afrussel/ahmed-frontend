@@ -107,8 +107,11 @@ export default function HeroSection() {
             {/* Horizontal accent line */}
             <div className="absolute top-24 left-0 right-0 glow-line" />
 
+            {/* Horizontal lines pattern */}
+            <div className="absolute inset-0 line-bg" />
+
             {/* Background Effects */}
-            <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-[#1e3a8a]/60 via-[#0a192f]/40 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-[#1245B3]/60 via-[#1245B3]/40 to-transparent pointer-events-none" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -145,13 +148,13 @@ export default function HeroSection() {
                     <div ref={buttonsRef} className="flex flex-wrap items-center justify-center gap-4">
                         <Link
                             href="#pricing"
-                            className="px-6 py-3 rounded-full bg-[#3b82f6] text-white text-sm hover:bg-[#2563eb] transition-colors"
+                            className="common-btn px-6 py-3 hover:bg-[#2563eb] transition-colors"
                         >
                             Enroll now
                         </Link>
                         <Link
                             href="#curriculum"
-                            className="px-6 py-3 rounded-full bg-[#1A1A1A] border border-white/10 text-white text-sm hover:bg-[#252525] transition-colors"
+                            className="common-btn-dark px-6 py-3 hover:bg-[#252525] transition-colors"
                         >
                             Curriculum
                         </Link>

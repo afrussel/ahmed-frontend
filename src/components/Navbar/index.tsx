@@ -6,7 +6,7 @@ import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
-    { label: "Overview", href: "#about" },
+    { label: "Overview", href: "#overall" },
     { label: "Curriculum", href: "#curriculum" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Pricing", href: "#pricing" },
@@ -28,7 +28,7 @@ export default function Navbar() {
                 ? "bg-[#050505]/90 backdrop-blur-md border-b border-white/10"
                 : "bg-transparent border-b border-transparent"
         }`}>
-            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-0 py-3">
                 <div className="flex items-center justify-between h-16">
 
                     {/* Logo */}
@@ -49,7 +49,7 @@ export default function Navbar() {
                             <Link
                                 key={l.label}
                                 href={l.href}
-                                className="text-sm text-gray-400 hover:text-white transition-colors font-medium"
+                                className="text-gray-400 hover:text-white transition-colors font-medium"
                             >
                                 {l.label}
                             </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
                         </div>
                         <Link
                             href="#pricing"
-                            className="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm transition-all active:scale-[0.98]"
+                            className="common-btn hidden md:inline-flex items-center justify-center px-5 py-2.5 hover:bg-[#2563eb] transition-all active:scale-[0.98]"
                         >
                             Enroll now
                         </Link>

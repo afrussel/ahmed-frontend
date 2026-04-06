@@ -9,7 +9,7 @@ const timelineItems = [
 
 export default function FeaturesTimeline() {
     return (
-        <section className="bg-[#050505] py-20 md:py-32 px-4">
+        <section id="overall"  className="bg-[#050505] py-20 md:py-32 px-4">
             <div className="max-w-2xl mx-auto flex flex-col items-center">
                 {/* Badge */}
                 <div className="badge-glow mb-8">

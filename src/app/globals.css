@@ -79,6 +79,41 @@ body {
   padding: 8px 16px;
 }*/
 
+/*.line-bg {
+  background-image: url('/images/line-bg.png');
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.2;
+  pointer-events: none;
+}*/
+
+.common-btn {
+  border-radius: 12px;
+  background-color: #2466F2;
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 1.35;
+  color: #fff;
+}
+.common-btn-dark {
+  border-radius: 12px;
+  background-color: #171B21;
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 1.35;
+  color: #fff;
+}
+.navbar-text {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.35;
+}
 
 .badge-glow {
   background-color: #171B21;
@@ -217,6 +252,36 @@ body {
   margin-top: 72px;
   margin-bottom: 72px;
 }
+
+.avatars-area .text{
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #D0D5D9;
+  padding-top: 5px;
+}
+.large-thumbnails {
+  width: 118px;
+  height: 120px;
+}
+.stacked-thumbnails .subtext {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+  padding-bottom: 30px;
+}
+.stacked-thumbnails .title {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.15;
+  padding-bottom: 30px;
+}
+
 
 .footer-box {
   flex-direction: column;
