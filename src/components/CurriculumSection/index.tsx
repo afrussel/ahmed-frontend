@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { ChevronUp, ChevronDown, Play, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -76,7 +78,7 @@ export default function CurriculumSection() {
                 </ScrollReveal>
 
                 {/* Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_440px] gap-8 items-start">
 
                     {/* Left: Accordion */}
                     <div className="space-y-4">
@@ -87,16 +89,28 @@ export default function CurriculumSection() {
                                     {/* Module Header */}
                                     <button
                                         onClick={() => setOpenModule(isOpen ? null : idx)}
-                                        className="w-full flex items-center justify-between p-5 text-left transition-colors"
+                                        className="lesson-question w-full flex items-center justify-between text-left transition-colors"
                                     >
                                         <div>
-                                            <h3 className="text-white text-base md:text-lg">{mod.title}</h3>
-                                            <p className="text-gray-500 text-xs mt-1">{mod.duration}</p>
+                                            <h3 className="title">{mod.title}</h3>
+                                            <p className="sub-title">{mod.duration}</p>
                                         </div>
                                         {isOpen ? (
-                                            <ChevronUp className="w-5 h-5 text-[#3b82f6] shrink-0 transition-transform" />
+                                            <Image
+                                                src="/images/icons/arrow-up.svg"
+                                                alt="Collapse"
+                                                width={32}
+                                                height={32}
+                                                className="shrink-0"
+                                            />
                                         ) : (
-                                            <ChevronDown className="w-5 h-5 text-gray-400 shrink-0 transition-transform" />
+                                            <Image
+                                                src="/images/icons/arrow-down.svg"
+                                                alt="Expand"
+                                                width={32}
+                                                height={32}
+                                                className="shrink-0"
+                                            />
                                         )}
                                     </button>
 
@@ -104,17 +118,17 @@ export default function CurriculumSection() {
                                     <div className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${isOpen ? 'max-h-[500px]' : 'max-h-0'}`}>
                                         <div className="px-5 pb-5 pt-4 border-t border-white/5">
                                             {mod.lessons.map((lesson, lIdx) => (
-                                                <div key={lIdx} className="flex items-center gap-4 py-2">
-                                                    <div className="w-10 h-10 rounded-full bg-[#3b82f6]/20 flex items-center justify-center shrink-0">
+                                                <div key={lIdx} className="lesson-items-box flex items-center gap-4 lesson-item-border last:border-b-0">
+                                                    <div className="round-icon-size w-10 h-10 flex items-center justify-center shrink-0">
                                                         <Play className="w-4 h-4 text-[#3b82f6] fill-[#3b82f6] ml-0.5" />
                                                     </div>
-                                                    <span className="text-gray-300 text-sm flex-1">{lesson.title}</span>
+                                                    <span className="lesson-title flex-1">{lesson.title}</span>
                                                     {"preview" in lesson && lesson.preview && (
-                                                        <span className="text-xs text-[#3b82f6] border border-[#3b82f6]/30 rounded-full px-2.5 py-0.5 font-medium whitespace-nowrap">
-            Preview
-          </span>
+                                                        <span className="preview-text whitespace-nowrap">
+                                                            Preview
+                                                        </span>
                                                     )}
-                                                    <span className="text-gray-500 text-xs shrink-0 whitespace-nowrap">{lesson.duration}</span>
+                                                    <span className="duration shrink-0 whitespace-nowrap">{lesson.duration}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -126,19 +140,28 @@ export default function CurriculumSection() {
 
                     {/* Right: Sidebar Card */}
                     <ScrollReveal direction="up" delay={200}>
-                        <div className="rounded-2xl border border-white/10 bg-[#0a0a0a] p-6 lg:sticky lg:top-24 self-start">
-                            <h3 className="text-white font-semibold text-xl mb-6">Not only video lessons!</h3>
-                            <div className="flex flex-col gap-4 mb-8">
+                        <div className="sidebar-card lg:sticky lg:top-24 self-start">
+                            <h3>Not only video lessons!</h3>
+                            <div className="items-area flex flex-col">
                                 {sidebarItems.map((item, idx) => (
-                                    <div key={idx} className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-[#3b82f6] shrink-0 mt-0.5" />
-                                        <span className="text-gray-300 text-sm">{item}</span>
+                                    <div key={idx} className="flex items-center gap-3">
+                                        <div className="round-icon bg-section-dark-icon-bg flex items-center justify-center">
+                                            <img
+                                                src="/images/icons/t3.svg"
+                                                alt="Feature icon"
+                                                className="w-5 h-5"
+                                            />
+                                        </div>
+                                        <span className="item-text">{item}</span>
                                     </div>
                                 ))}
                             </div>
-                            <button className="w-full bg-[#3b82f6] hover:bg-[#2563eb] text-white font-semibold py-3 rounded-lg transition-all active:scale-[0.98]">
+                            <Link
+                                href="#pricing"
+                                className="w-full bg-[#2466F2] hover:bg-[#2563eb] text-white font-semibold py-3 rounded-lg text-center transition-all active:scale-[0.98] inline-block"
+                            >
                                 Enroll now
-                            </button>
+                            </Link>
                         </div>
                     </ScrollReveal>
 

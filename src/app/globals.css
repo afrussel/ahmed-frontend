@@ -282,6 +282,177 @@ body {
   padding-bottom: 30px;
 }
 
+.curriculum-section h2 {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  padding-bottom: 70px;
+  color: #E0E3E5;
+}
+.curriculum-section h3.title {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.15;
+  color: #d0d5d9;
+}
+.curriculum-section p.sub-title {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+  padding-top: 10px;
+}
+.curriculum-section .lesson-title {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+}
+.curriculum-section .round-icon-size {
+  background-color: #fff;
+  border: 2px solid #7c7b7b;
+  border-radius: 50%;
+}
+.curriculum-section .preview-text {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #669EFF;
+  background-color: #171B21;
+  padding: 4px 15px;
+  border-radius: 99px;
+}
+.curriculum-section .duration {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+}
+.lesson-items-box {
+  padding: 28px 0;
+}
+.lesson-question, .lesson-item-border {
+  position: relative;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, transparent, #306ee8, transparent) 1;
+}
+.lesson-item-border:last-child {
+  border-bottom: none;
+  border-image: none;
+}
+.module-content-border {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.lesson-question {
+  padding: 32px calc(var(--spacing) * 5) 32px;
+}
+.sidebar-card {
+  border-radius: 24px;
+  background-color: #0a0a0a;
+  position: relative;
+  border: 1px solid rgba(36, 102, 242, 0.1);
+  padding: calc(var(--spacing) * 8);
+}
+.sidebar-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(81.27% 74.72% at 50% 50%, #2466F2 0%, rgba(36, 102, 242, 0) 100%);
+
+  -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sidebar-card h3 {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 1.15;
+  color: #d0d5d9;
+}
+.sidebar-card .items-area {
+  padding: 50px 0;
+  gap: calc(var(--spacing) * 8);
+}
+.sidebar-card .items-area .item-text {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+}
+.sidebar-card .round-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #171b21;
+  border: 1px solid #2466f24d;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-card .round-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+
+.testimonials h2 {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #E0E3E5;
+  padding-bottom: 50px;
+}
+
+.avatar-area img, .video-avatar img {
+  width: 40px;
+  height: 40px;
+}
+.card-text {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+}
+.avatar-name {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.15;
+  color: #d0d5d9;
+  padding-bottom: 5px;
+}
+.avatar-role {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+}
 
 .footer-box {
   flex-direction: column;
