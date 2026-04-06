@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -15,7 +15,6 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    // স্ক্রল ইফেক্ট: ব্যাকগ্রাউন্ড ব্লার অ্যাড করার জন্য
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 10);
         window.addEventListener("scroll", handleScroll);
@@ -54,12 +53,18 @@ export default function Navbar() {
 
                     {/* Right Side Actions */}
                     <div className="flex items-center gap-3">
-                        <ThemeToggle />
-
-                        {/* Desktop CTA */}
+                        {/*<ThemeToggle />*/}
+                        <div className="flex items-center bg-section-dark-icon-bg rounded-full p-1 gap-1">
+                            <button className="h-7 w-7 rounded-full flex items-center justify-center bg-section-dark-icon-bg text-section-dark-foreground">
+                                <Moon className="h-3.5 w-3.5" />
+                            </button>
+                            <button className="h-7 w-7 rounded-full flex items-center justify-center text-section-dark-foreground">
+                                <Sun className="h-3.5 w-3.5" />
+                            </button>
+                        </div>
                         <Link
                             href="#pricing"
-                            className="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-semibold transition-all active:scale-[0.98]"
+                            className="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm transition-all active:scale-[0.98]"
                         >
                             Enroll now
                         </Link>
@@ -89,6 +94,7 @@ export default function Navbar() {
                             {l.label}
                         </Link>
                     ))}
+
                     <div className="pt-2">
                         <Link
                             href="#pricing"
