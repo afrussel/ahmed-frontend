@@ -1,10 +1,10 @@
-import { Settings, Brain, Zap, Link } from "lucide-react";
+import Image from "next/image";
 
 const timelineItems = [
-    { icon: Settings, text: "Develop laser-sharp focus & eliminate distractions." },
-    { icon: Brain, text: "Master deep work techniques for smarter productivity." },
-    { icon: Zap, text: "Overcome procrastination & get more done." },
-    { icon: Link, text: "Build lasting habits for long-term success." },
+    { icon: "/images/icons/t1.svg", text: "Develop laser-sharp focus & eliminate distractions." },
+    { icon: "/images/icons/t2.svg", text: "Master deep work techniques for smarter productivity." },
+    { icon: "/images/icons/t3.svg", text: "Overcome procrastination & get more done." },
+    { icon: "/images/icons/t4.svg", text: "Build lasting habits for long-term success." },
 ];
 
 export default function FeaturesTimeline() {
@@ -28,23 +28,27 @@ export default function FeaturesTimeline() {
                 </h2>
 
                 {/* Timeline */}
-                <div className="relative pl-8">
+                <div className="relative line-gap">
                     {/* Vertical line */}
-                    <div className="absolute left-0 top-0 bottom-0 w-px bg-section-dark-icon-bg" />
+                    <div className="absolute left-0 top-0 bottom-0 w-px bg-section-dark-icon-bg dot-line" />
 
                     <div className="flex flex-col gap-14">
                         {timelineItems.map((item, index) => (
                             <div key={index} className="relative">
                                 {/* Dot on line */}
-                                <div className="absolute -left-8 top-4 -translate-x-1/2 h-3 w-3 rounded-full bg-section-dark-accent" />
+                                <div className="absolute -left-8 top-4 -translate-x-1/2 h-3 w-3 rounded-full dot-size" />
 
                                 {/* Icon */}
-                                <div className="h-12 w-12 rounded-full bg-section-dark-icon-bg flex items-center justify-center mb-3">
-                                    <item.icon className="h-5 w-5 text-section-dark-foreground" />
+                                <div className="icon-size h-12 w-12 rounded-full bg-section-dark-icon-bg flex items-center justify-center mb-3">
+                                    <img
+                                        src={item.icon}
+                                        alt="Feature icon"
+                                        className="w-5 h-5"
+                                    />
                                 </div>
 
                                 {/* Text */}
-                                <p className="text-section-dark-foreground text-base leading-relaxed max-w-xs">
+                                <p className="timeline-text text-section-dark-foreground text-base leading-relaxed max-w-xs">
                                     {item.text}
                                 </p>
                             </div>

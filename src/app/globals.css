@@ -120,6 +120,57 @@ body {
   background: linear-gradient(90deg, transparent, #306ee8, transparent);
   height: 1px;
 }
+.line-gap {
+  padding-left: calc(var(--spacing) * 16);
+}
+.dot-line {
+  background-color: #2466F2;
+}
+.dot-size {
+  background-color: #2466f2;
+  width: 20px;
+  height: 20px;
+  left: -64px;
+}
+.icon-size {
+  width: 68px;
+  height: 68px;
+  background-color: #171B21;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 8px 40px 0 rgba(36, 102, 242, 0.12);
+}
+
+.icon-size::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(circle at 50% 50%, #2466F2 0%, rgba(36, 102, 242, 0) 100%);
+  -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.icon-size img {
+  width: 28px;
+  height: 28px;
+}
+.timeline-text {
+  color: #d0d5d9;
+  font-size: 24px;
+  line-height: 135%;
+  padding-top: 10px;
+}
 
 /* =========================================
    HERO TITLE - Figma Design Tokens
