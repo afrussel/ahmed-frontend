@@ -165,7 +165,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'SF Pro Display Medium';
+  font-family: 'SF Pro Display Medium', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: clamp(2rem, 3.5vw, 3.25rem);
@@ -176,7 +176,7 @@ body {
   will-change: transform, opacity;
 }
 .hero-subheadline {
-  font-family: 'SF Pro Display Regular';
+  font-family: 'SF Pro Display Regular', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.063rem;
@@ -200,7 +200,7 @@ body {
 }
 
 .section-heading {
-  font-family: 'SF Pro Display Medium';
+  font-family: 'SF Pro Display Medium', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
