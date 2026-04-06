@@ -141,29 +141,18 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0 8px 40px 0 rgba(36, 102, 242, 0.12);
+  border: 1px solid rgba(36, 102, 242, 0.3);
+  box-shadow:
+          0px 8px 40px 0px rgba(36, 102, 242, 0.15),
+          0px 0px 20px rgba(36, 102, 242, 0.1),
+          inset 0px 0px 20px rgba(36, 102, 242, 0.08);
 }
-
-.icon-size::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: radial-gradient(circle at 50% 50%, #2466F2 0%, rgba(36, 102, 242, 0) 100%);
-  -webkit-mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-  mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-.icon-size img {
+.icon-size img,
+.icon-size svg {
   width: 28px;
   height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 .timeline-text {
   color: #d0d5d9;
@@ -171,10 +160,10 @@ body {
   line-height: 135%;
   padding-top: 10px;
 }
+.timeline-items {
+  padding-top: 38px;
+}
 
-/* =========================================
-   HERO TITLE - Figma Design Tokens
-   ========================================= */
 .hero-title {
   font-family: 'SF Pro Display Medium';
   font-weight: 500;
@@ -186,9 +175,6 @@ body {
   color: #E0E3E5;
   will-change: transform, opacity;
 }
-/* =========================================
-   SUBHEADLINE / BODY TEXT - Figma Design Tokens
-   ========================================= */
 .hero-subheadline {
   font-family: 'SF Pro Display Regular';
   font-weight: 400;
@@ -205,11 +191,82 @@ body {
   will-change: transform, opacity;
 }
 
+.problem-section-title {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 400;
+  line-height: 135%;
+  color: #DFE2E5;
+}
+
+.section-heading {
+  font-family: 'SF Pro Display Medium';
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #E0E3E5;
+}
+
 .slick-box-row {
   padding-left: 300px;
 }
-
 .price-box {
   margin-top: 72px;
   margin-bottom: 72px;
+}
+
+.footer-box {
+  flex-direction: column;
+  padding: 15px;
+  align-items: flex-start;
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  height: 180px;
+}
+.top-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-area {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  padding-bottom: 6px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+.footer-area h3 {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+}
+.footer-area .subtext {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 135%;
+  padding-top: 28px;
+}
+.copyright {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #d0d5d9;
+}
+.footer-link {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #d0d5d9;
 }

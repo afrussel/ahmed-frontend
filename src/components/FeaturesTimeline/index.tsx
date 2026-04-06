@@ -34,7 +34,7 @@ export default function FeaturesTimeline() {
 
                     <div className="flex flex-col gap-14">
                         {timelineItems.map((item, index) => (
-                            <div key={index} className="relative">
+                            <div key={index} className="relative timeline-items">
                                 {/* Dot on line */}
                                 <div className="absolute -left-8 top-4 -translate-x-1/2 h-3 w-3 rounded-full dot-size" />
 

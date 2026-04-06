@@ -10,7 +10,7 @@ const problemImages = [
 
 export default function ProblemSection() {
     return (
-        <section className="bg-[#050505] py-20 md:py-32 px-4 text-center">
+        <section className="problem-section bg-[#050505] py-20 md:py-32 px-4 text-center">
             <div className="max-w-4xl mx-auto">
 
                 {/* Badge with ScrollReveal */}
@@ -28,7 +28,7 @@ export default function ProblemSection() {
 
                 {/* Main Text with ScrollReveal - SEO: Proper H2 tag */}
                 <ScrollReveal direction="up" delay={100}>
-                    <h2 className="text-3xl md:text-5xl text-white leading-tight mb-12">
+                    <h2 className="problem-section-title mb-12">
                         If you struggle to focus, feel <br className="hidden md:block" /> overwhelmed
                         by endl<span className="text-gray-500 font-normal">ess tasks, or <br className="hidden md:block" />
                         procrastinate instead of making <br className="hidden md:block" />
