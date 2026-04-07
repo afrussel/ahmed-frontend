@@ -12,7 +12,7 @@ export default function SolutionSection() {
     const stackedThumbnails = [testimonial1, testimonial2, testimonial3];
 
     return (
-        <section className="bg-[#08090A] py-20 md:py-32 px-4">
+        <section className="bg-white dark:bg-[#08090A] py-20 md:py-32 px-4">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
                 {/* Left (40%) */}
                 <div className="w-full lg:w-[40%] relative">
@@ -34,7 +34,7 @@ export default function SolutionSection() {
                 {/* Right (60%) */}
                 <div className="w-full lg:w-[60%]">
                     <ScrollReveal direction="right" delay={200}>
-                        <div className="flex flex-col justify-between w-full h-auto lg:h-[642px] min-h-[400px] lg:min-h-[642px] rounded-2xl lg:rounded-[24px] p-4 sm:p-6 lg:p-[40px] bg-[#0f0f0f] border border-white/10">
+                        <div className="flex flex-col justify-between w-full h-auto lg:h-[642px] min-h-[400px] lg:min-h-[642px] rounded-2xl lg:rounded-[24px] p-4 sm:p-6 lg:p-[40px] bg-[#f5f6f7] dark:bg-[#0f0f0f] border border-white/10">
                             {/* Top Row: Badge + Avatars */}
                             <div className="flex flex-col lg:flex-row items-start justify-between">
 
@@ -68,7 +68,9 @@ export default function SolutionSection() {
                                             </div>
                                         ))}
                                     </div>
-                                    <p className="text">Join with 5K other students</p>
+                                    <p className="text !text-[#000] dark:!text-[#d0d5d9] transition-colors duration-300">
+                                        Join with 5K other students
+                                    </p>
                                 </div>
                             </div>
 
@@ -77,10 +79,10 @@ export default function SolutionSection() {
 
                                 {/* Text Content */}
                                 <div className="flex-1">
-                                    <p className="subtext">
+                                    <p className="subtext !text-[#000] dark:!text-[#aaaeb2]">
                                         The ability to concentrate <br /> deeply is the ultimate <br /> productivity hack
                                     </p>
-                                    <h2 className="title">
+                                    <h2 className="title !text-[#000] dark:!text-[#d0d5d9]">
                                         And fortunately it&apos;s <br /> a skill you can train <br /> & develop.
                                     </h2>
                                 </div>

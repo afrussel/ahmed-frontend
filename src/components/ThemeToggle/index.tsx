@@ -1,5 +1,5 @@
 "use client";
-import { Moon, Sun, Check } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
@@ -39,7 +39,7 @@ export default function ThemeToggle() {
     }
 
     return (
-        <div className="flex items-center bg-[#171B21] rounded-full p-1 gap-1">
+        <div className="toggle-btn-area flex items-center bg-[#171B21] rounded-full p-1 gap-1">
             {/* Dark Mode Button */}
             <button
                 onClick={() => handleThemeChange(true)}
@@ -51,7 +51,6 @@ export default function ThemeToggle() {
                 aria-label="Dark mode"
             >
                 <Moon className="h-3.5 w-3.5" />
-                {dark && <Check className="h-3 w-3 absolute top-0.5 right-0.5" />}
             </button>
 
             {/* Light Mode Button */}
@@ -65,7 +64,6 @@ export default function ThemeToggle() {
                 aria-label="Light mode"
             >
                 <Sun className="h-3.5 w-3.5" />
-                {!dark && <Check className="h-3 w-3 absolute top-0.5 right-0.5" />}
             </button>
         </div>
     );

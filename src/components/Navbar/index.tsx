@@ -38,7 +38,7 @@ export default function Navbar() {
                             alt="PPA Logo"
                             width={120}
                             height={40}
-                            className="h-8 w-auto"
+                            className="h-8 w-auto transition-all duration-300 filter brightness-0 dark:brightness-100 dark:filter-none"
                             priority
                         />
                     </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
                             <Link
                                 key={l.label}
                                 href={l.href}
-                                className="text-gray-400 hover:text-white transition-colors font-medium"
+                                className="text-black dark:text-gray-400 hover:text-black/20 dark:hover:text-white transition-colors font-medium"
                             >
                                 {l.label}
                             </Link>

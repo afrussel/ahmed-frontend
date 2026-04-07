@@ -28,11 +28,11 @@ export default function ProblemSection() {
 
                 {/* Main Text with ScrollReveal - SEO: Proper H2 tag */}
                 <ScrollReveal direction="up" delay={100}>
-                    <h2 className="problem-section-title mb-12">
+                    <h2 className="problem-section-title mb-12 !text-[#000000] dark:!text-[#DFE2E5] transition-colors duration-300">
                         If you struggle to focus, feel <br className="hidden md:block" /> overwhelmed
-                        by endl<span className="text-gray-500 font-normal">ess tasks, or <br className="hidden md:block" />
-                        procrastinate instead of making <br className="hidden md:block" />
-                        progress, you&apos;re not alone. </span>
+                        by endl<span className="font-normal !text-[#DFE2E5] dark:!text-gray-500 transition-colors duration-300">ess tasks, or <br className="hidden md:block" />
+    procrastinate instead of making <br className="hidden md:block" />
+    progress, you&apos;re not alone. </span>
                     </h2>
                 </ScrollReveal>
 
