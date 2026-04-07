@@ -17,7 +17,7 @@ export default function SolutionSection() {
                 {/* Left (40%) */}
                 <div className="w-full lg:w-[40%] relative">
                     <ScrollReveal direction="left">
-                        <div className="h-[642px] max-w-[520px] max-h-[642px] overflow-hidden">
+                        <div className="h-[642px] max-w-[520px] max-h-[642px] overflow-hidden left-img">
                             <Image
                                 src={aboutImg}
                                 alt="Deep Work instructor demonstrating focus techniques"
@@ -32,11 +32,11 @@ export default function SolutionSection() {
                 </div>
 
                 {/* Right (60%) */}
-                <div className="w-full lg:w-[60%]">
+                <div className="w-full lg:w-[60%] solution-right-box">
                     <ScrollReveal direction="right" delay={200}>
-                        <div className="flex flex-col justify-between w-full h-auto lg:h-[642px] min-h-[400px] lg:min-h-[642px] rounded-2xl lg:rounded-[24px] p-4 sm:p-6 lg:p-[40px] bg-[#f5f6f7] dark:bg-[#0f0f0f] border border-white/10">
+                        <div className="main-content flex flex-col justify-between w-full h-auto lg:h-[642px] min-h-[400px] lg:min-h-[642px] rounded-2xl lg:rounded-[24px] p-4 sm:p-6 lg:p-[40px] bg-[#f5f6f7] dark:bg-[#0f0f0f] border border-white/10">
                             {/* Top Row: Badge + Avatars */}
-                            <div className="flex flex-col lg:flex-row items-start justify-between">
+                            <div className="top-row flex flex-col lg:flex-row items-start justify-between">
 
                                 {/* Badge */}
                                 <div className="flex justify-center mb-6">
@@ -53,7 +53,7 @@ export default function SolutionSection() {
 
                                 {/* Avatars */}
                                 <div className="avatars-area text-center">
-                                    <div className="flex -space-x-3 justify-start lg:justify-end mb-1">
+                                    <div className="flex -space-x-3 justify-start lg:justify-end mb-1 top-avatar-box">
                                         {topAvatars.map((img, i) => (
                                             <div key={i} className="relative">
                                                 <Image
@@ -75,7 +75,7 @@ export default function SolutionSection() {
                             </div>
 
                             {/* Middle – Text + Stacked Thumbnails */}
-                            <div className="stacked-thumbnails flex flex-col lg:flex-row items-end justify-between gap-6">
+                            <div className="stacked-thumbnails flex flex-col lg:flex-row items-start md:items-end justify-between gap-6">
 
                                 {/* Text Content */}
                                 <div className="flex-1">
@@ -88,7 +88,7 @@ export default function SolutionSection() {
                                 </div>
 
                                 {/* Stacked Thumbnails */}
-                                <div className="flex flex-row lg:flex-col gap-3 shrink-0">
+                                <div className="flex flex-row lg:flex-col gap-3 shrink-0 thumbnails-parents">
                                     {stackedThumbnails.map((img, i) => (
                                         <div
                                             key={i}

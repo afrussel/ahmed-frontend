@@ -598,11 +598,16 @@ body {
 
 
 /* Solution Section Wrapper */
-
+.left-img {
+  display: none;
+}
 
 
 /* Desktop (981px+) */
 @media (min-width: 981px) {
+  .left-img {
+    display: block;
+  }
   .solution-card-right {
     width: 730px;
     height: 642px;
@@ -616,9 +621,34 @@ body {
   .glow-bg {
     background-repeat: no-repeat;
   }
-}
+  .top-row {
+    flex-direction: row;
+  }
+  .solution-right-box .main-content {
+    gap: 60px;
+  }
+  .solution-right-box .stacked-thumbnails {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .thumbnails-parents {
+    flex-direction: column;
+  }
+  .top-avatar-box {
+    justify-content: flex-end;
+  }
+  .slick-box-row {
+    padding-left: 10px;
+  }
+  .price-row .main-price {
+    font-size: 44px;
+  }
 
+}
 @media (max-width: 520px) {
+  .stacked-thumbnails {
+    padding-top: 60px;
+  }
   .slick-box-row {
     padding-left: 0;
   }
