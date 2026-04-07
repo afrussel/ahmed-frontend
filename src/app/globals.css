@@ -255,7 +255,7 @@ body {
 }
 
 .slick-box-row {
-  padding-left: 300px;
+  padding-left: calc(var(--spacing) * 20);
 }
 .price-box {
   margin-top: 56px;
@@ -602,7 +602,11 @@ body {
   display: none;
 }
 
-
+@media (min-width: 1920px) {
+  .slick-box-row {
+    padding-left: calc(var(--spacing) * 80);
+  }
+}
 /* Desktop (981px+) */
 @media (min-width: 981px) {
   .left-img {
