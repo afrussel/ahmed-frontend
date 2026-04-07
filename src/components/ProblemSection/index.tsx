@@ -10,7 +10,7 @@ const problemImages = [
 
 export default function ProblemSection() {
     return (
-        <section className="problem-section bg-[#050505] py-20 md:py-32 px-4 text-center">
+        <section className="problem-section bg-[#08090A] py-20 md:py-32 px-4 text-center">
             <div className="max-w-4xl mx-auto">
 
                 {/* Badge with ScrollReveal */}
@@ -38,7 +38,7 @@ export default function ProblemSection() {
 
                 {/* 3 Images Grid with ScrollReveal */}
                 <ScrollReveal direction="scale" delay={200}>
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                    <div className="flex flex-row md:flex-row items-center justify-center gap-4">
                         {problemImages.map((img, index) => (
                             <div
                                 key={index}

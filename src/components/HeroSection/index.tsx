@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CountdownTimer from "@/components/CountdownTimer";
-import { Play, X } from "lucide-react";
+import { X } from "lucide-react";
 import gsap from "gsap";
 
 const YOUTUBE_VIDEO_ID = "2VhFwKz8a8I";
@@ -102,20 +102,18 @@ export default function HeroSection() {
         <section
             ref={sectionRef}
             id="home"
-            className="relative pt-24 pb-20 md:pt-50 md:pb-24 overflow-hidden bg-[#050505]"
+            className="relative pt-24 pb-20 md:pt-50 md:pb-24 overflow-hidden bg-[#08090A]"
         >
             {/* Horizontal accent line */}
             <div className="absolute top-24 left-0 right-0 glow-line" />
 
-            {/* Horizontal lines pattern */}
-            <div className="absolute inset-0 line-bg" />
+            <div className="absolute inset-0 bottom-0 left-0 glow-bg" />
 
             {/* Background Effects */}
             <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-[#1245B3]/60 via-[#1245B3]/40 to-transparent pointer-events-none" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Top Content - ScrollReveal removed, GSAP handles animations */}
                 <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
 
                     {/* Countdown Badge */}
@@ -183,17 +181,27 @@ export default function HeroSection() {
 
                         {/* Play Button - GSAP Heartbeat */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <button
-                                ref={playButtonRef}
-                                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
-                                aria-label="Play course preview video"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setIsModalOpen(true);
-                                }}
-                            >
-                                <Play className="w-6 h-6 md:w-8 md:h-8 text-[#050505] ml-1" fill="#050505" />
-                            </button>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <button
+                                    ref={playButtonRef}
+                                    className="w-16 h-16 md:w-20 md:h-20 hover:scale-110 transition-transform cursor-pointer bg-transparent border-none p-0"
+                                    aria-label="Play course preview video"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setIsModalOpen(true);
+                                    }}
+                                >
+                                    <Image
+                                        src="/images/icons/play-button.svg"
+                                        alt="Play video"
+                                        width={80}
+                                        height={80}
+                                        className="w-full h-full object-contain"
+                                        priority
+                                        unoptimized
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

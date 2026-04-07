@@ -56,7 +56,7 @@ export default function CurriculumSection() {
     const [openModule, setOpenModule] = useState<number | null>(0);
 
     return (
-        <section id="curriculum" className="curriculum-section bg-[#050505] py-20 md:py-32 px-4">
+        <section id="curriculum" className="curriculum-section bg-[#08090A] py-20 md:py-32 px-4">
             <div className="max-w-6xl mx-auto">
 
                 {/* Badge & Heading */}

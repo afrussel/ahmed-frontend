@@ -199,6 +199,21 @@ body {
   padding-top: 38px;
 }
 
+.line-bg {
+  background-image: url('/images/line-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  opacity: 0.05;
+}
+
+.glow-bg {
+  background-image: url('/images/glow-effect.png');
+  background-size: contain;
+  background-position: bottom center;
+  background-color: #08090A;
+}
+
 .hero-title {
   font-family: 'SF Pro Display Medium', sans-serif;
   font-weight: 500;
@@ -249,8 +264,8 @@ body {
   padding-left: 300px;
 }
 .price-box {
-  margin-top: 72px;
-  margin-bottom: 72px;
+  margin-top: 56px;
+  margin-bottom: 56px;
 }
 
 .avatars-area .text{
@@ -280,6 +295,7 @@ body {
   font-size: 28px;
   line-height: 1.15;
   padding-bottom: 30px;
+  color: #D0D5D9;
 }
 
 .curriculum-section h2 {
@@ -411,6 +427,17 @@ body {
 .sidebar-card .round-icon img, .pricing .round-icon img {
   width: 16px;
   height: 16px;
+}
+
+.overall h2 {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  color: #E0E3E5;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 
@@ -573,4 +600,21 @@ body {
   font-weight: 400;
   line-height: 135%;
   color: #d0d5d9;
+}
+
+
+@media (max-width: 520px) {
+  .glow-bg {
+    background-repeat: no-repeat;
+  }
+  .slick-box-row {
+    padding-left: 0;
+  }
+  .large-thumbnails {
+    width: calc(var(--spacing) * 21);
+    height: calc(var(--spacing) * 21);
+  }
+  .footer-area h3 {
+    text-align: center;
+  }
 }
