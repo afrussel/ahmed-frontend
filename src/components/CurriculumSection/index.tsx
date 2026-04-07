@@ -56,7 +56,7 @@ export default function CurriculumSection() {
     const [openModule, setOpenModule] = useState<number | null>(0);
 
     return (
-        <section id="curriculum" className="curriculum-section bg-[#08090A] py-20 md:py-32 px-4">
+        <section id="curriculum" className="curriculum-section bg-white dark:bg-[#08090A] py-20 md:py-32 px-4">
             <div className="max-w-6xl mx-auto">
 
                 {/* Badge & Heading */}
@@ -67,12 +67,12 @@ export default function CurriculumSection() {
                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
                             </span>
-                            <span className="text">
+                            <span className="text !text-black dark:!text-[#d0d5d9] transition-colors duration-300">
                               Course Curriculum
                             </span>
                         </div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl text-white text-center leading-tight mb-12 max-w-2xl mx-auto">
+                    <h2 className="!text-[#000000] dark:!text-[#E0E3E5] transition-colors duration-300 text-center leading-tight mb-12 max-w-2xl mx-auto">
                         Mastering Deep Work: A Structured Path to Peak Productivity
                     </h2>
                 </ScrollReveal>
@@ -92,8 +92,8 @@ export default function CurriculumSection() {
                                         className="lesson-question w-full flex items-center justify-between text-left transition-colors"
                                     >
                                         <div>
-                                            <h3 className="title">{mod.title}</h3>
-                                            <p className="sub-title">{mod.duration}</p>
+                                            <h3 className="title !text-[#000000] dark:!text-[#d0d5d9] transition-colors duration-300">{mod.title}</h3>
+                                            <p className="sub-title !text-[#000000] dark:!text-[#AAAEB2] transition-colors duration-300">{mod.duration}</p>
                                         </div>
                                         {isOpen ? (
                                             <Image
@@ -122,13 +122,13 @@ export default function CurriculumSection() {
                                                     <div className="round-icon-size w-10 h-10 flex items-center justify-center shrink-0">
                                                         <Play className="w-4 h-4 text-[#3b82f6] fill-[#3b82f6] ml-0.5" />
                                                     </div>
-                                                    <span className="lesson-title flex-1">{lesson.title}</span>
+                                                    <span className="lesson-title flex-1 !text-[#000000] dark:!text-[#AAAEB2] transition-colors duration-300">{lesson.title}</span>
                                                     {"preview" in lesson && lesson.preview && (
-                                                        <span className="preview-text whitespace-nowrap">
+                                                        <span className="preview-text whitespace-nowrap !bg-[#f5f6f7] dark:!bg-[#171b21] transition-colors duration-300">
                                                             Preview
                                                         </span>
                                                     )}
-                                                    <span className="duration shrink-0 whitespace-nowrap">{lesson.duration}</span>
+                                                    <span className="duration shrink-0 whitespace-nowrap !text-[#000000] dark:!text-[#AAAEB2]">{lesson.duration}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -140,8 +140,8 @@ export default function CurriculumSection() {
 
                     {/* Right: Sidebar Card */}
                     <ScrollReveal direction="up" delay={200}>
-                        <div className="sidebar-card lg:sticky lg:top-24 self-start">
-                            <h3>Not only video lessons!</h3>
+                        <div className="sidebar-card lg:sticky lg:top-24 self-start !bg-[#f5f6f7] dark:!bg-[#0a0a0a] transition-colors duration-300">
+                            <h3 className="!text-[#000000] dark:!text-[#d0d5d9]">Not only video lessons!</h3>
                             <div className="items-area flex flex-col">
                                 {sidebarItems.map((item, idx) => (
                                     <div key={idx} className="flex items-center gap-3">
@@ -152,7 +152,7 @@ export default function CurriculumSection() {
                                                 className="w-5 h-5"
                                             />
                                         </div>
-                                        <span className="item-text">{item}</span>
+                                        <span className="item-text !text-[#000000] dark:!text-[#aaaeb2]">{item}</span>
                                     </div>
                                 ))}
                             </div>

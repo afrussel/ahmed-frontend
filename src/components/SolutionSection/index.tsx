@@ -45,9 +45,9 @@ export default function SolutionSection() {
                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
                                     </span>
-                                        <span className="text">
-                                      No worries
-                                    </span>
+                                        <span className="text !text-black dark:!text-[#d0d5d9] transition-colors duration-300">
+                                          No worries
+                                        </span>
                                     </div>
                                 </div>
 

@@ -297,7 +297,6 @@ body {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   line-height: 1.15;
   padding-bottom: 70px;
-  color: #E0E3E5;
 }
 .curriculum-section h3.title {
   font-family: 'SF Pro Display Medium', sans-serif;
@@ -305,14 +304,12 @@ body {
   font-style: normal;
   font-size: 20px;
   line-height: 1.15;
-  color: #d0d5d9;
 }
 .curriculum-section p.sub-title {
   font-family: 'SF Pro Display Regular', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 135%;
-  color: #AAAEB2;
   padding-top: 10px;
 }
 .curriculum-section .lesson-title {
@@ -320,7 +317,6 @@ body {
   font-size: 17px;
   font-weight: 400;
   line-height: 135%;
-  color: #AAAEB2;
 }
 .curriculum-section .round-icon-size {
   background-color: #fff;
@@ -365,7 +361,6 @@ body {
 }
 .sidebar-card {
   border-radius: 24px;
-  background-color: #0a0a0a;
   position: relative;
   border: 1px solid rgba(36, 102, 242, 0.1);
   padding: calc(var(--spacing) * 8);
@@ -394,7 +389,6 @@ body {
   font-style: normal;
   font-size: 25px;
   line-height: 1.15;
-  color: #d0d5d9;
 }
 .sidebar-card .items-area {
   padding: 50px 0;
@@ -405,7 +399,6 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 135%;
-  color: #AAAEB2;
 }
 .sidebar-card .round-icon, .pricing .round-icon {
   width: 32px;
@@ -444,6 +437,14 @@ body {
   color: #E0E3E5;
   padding-bottom: 50px;
 }
+.testimonials .subtext {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
 
 .avatar-area img, .video-avatar img {
   width: 40px;
@@ -454,7 +455,6 @@ body {
   font-size: 17px;
   font-weight: 400;
   line-height: 135%;
-  color: #AAAEB2;
 }
 .avatar-name {
   font-family: 'SF Pro Display Medium', sans-serif;
@@ -479,7 +479,6 @@ body {
   font-style: normal;
   font-size: 40px;
   line-height: 1.15;
-  color: #E0E3E5;
   padding-bottom: 5px;
 }
 .pricing .subtitle {
@@ -487,7 +486,6 @@ body {
   font-size: 17px;
   font-weight: 400;
   line-height: 135%;
-  color: #d0d5d9;
   padding-top: 10px;
 }
 .pricing .item-text {
@@ -522,7 +520,7 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 15px;
-  line-height: 1.15;
+  line-height: 1.35;
   letter-spacing: 0;
   text-align: center;
   color: #fff;

@@ -90,7 +90,7 @@ export default function TestimonialsSection() {
     };
 
     return (
-        <section id="testimonials" className="testimonials bg-[#08090A] py-20 md:py-32">
+        <section id="testimonials" className="testimonials bg-white dark:bg-[#08090A] py-20 md:py-32">
             {/* Header Section */}
             <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-8">
                 <div className="flex justify-center mb-6">
@@ -99,16 +99,16 @@ export default function TestimonialsSection() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
                         </span>
-                        <span className="text-xs md:text-sm text-gray-300 font-medium">Testimonials</span>
+                        <span className="text-xs md:text-sm !text-black dark:!text-[#d0d5d9] transition-colors duration-300">Testimonials</span>
                     </div>
                 </div>
 
-                <h2 className="mb-12">
+                <h2 className="!text-[#000000] dark:!text-[#e0e3e5] transition-colors duration-300 mb-12">
                     Real Results from <br className="hidden md:block" /> Real People
                 </h2>
 
                 <div className="flex items-center justify-between">
-                    <p className="text-gray-300 text-lg font-medium">Join with 5K other students</p>
+                    <p className="subtext !text-[#000000] dark:!text-[#D0D5D9] transition-colors duration-300">Join with 5K other students</p>
                     <div className="flex gap-2">
                         <button
                             onClick={prevSlide}
@@ -152,7 +152,7 @@ export default function TestimonialsSection() {
                                 className="flex-shrink-0 px-2"
                                 style={{ width: `${cardWidthPercent}%` }}
                             >
-                                <div className="h-[400px] md:h-[400px] rounded-2xl overflow-hidden relative bg-[#0f0f0f] border border-white/10 group">
+                                <div className="h-[400px] md:h-[400px] rounded-2xl overflow-hidden relative bg-[#f5f6f7] dark:bg-[#0f0f0f] border border-white/10 group">
                                     {t.hasVideo && t.image ? (
                                         <div className="relative h-full">
                                             <Image
@@ -201,10 +201,10 @@ export default function TestimonialsSection() {
                                                     unoptimized
                                                 />
                                             </div>
-                                            <p className="card-text flex-1 mb-4">{t.text}</p>
+                                            <p className="card-text flex-1 !text-[#000000] dark:!text-[#aaaeb2] transition-colors duration-300 mb-4">{t.text}</p>
                                             <div className="pb-4">
-                                                <p className="avatar-name">{t.name}</p>
-                                                <p className="avatar-role">{t.role}</p>
+                                                <p className="avatar-name !text-[#000000] dark:!text-[#d0d5d9] transition-colors duration-300">{t.name}</p>
+                                                <p className="avatar-role !text-[#000000] dark:!text-[#aaaeb2] transition-colors duration-300">{t.role}</p>
                                             </div>
                                         </div>
                                     )}

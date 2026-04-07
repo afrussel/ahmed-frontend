@@ -9,7 +9,7 @@ const timelineItems = [
 
 export default function FeaturesTimeline() {
     return (
-        <section id="overall"  className="overall bg-[#08090A] py-20 md:py-32 px-4">
+        <section id="overall"  className="overall bg-white dark:bg-[#08090A] py-20 md:py-32 px-4">
             <div className="max-w-2xl mx-auto flex flex-col items-center">
                 {/* Badge */}
                 <ScrollReveal direction="up" delay={0}>
@@ -18,7 +18,7 @@ export default function FeaturesTimeline() {
                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
                     </span>
-                    <span className="text">
+                    <span className="text !text-black dark:!text-[#d0d5d9] transition-colors duration-300">
                       The Deep Work Blueprint
                     </span>
                     </div>
@@ -26,7 +26,7 @@ export default function FeaturesTimeline() {
 
                 <ScrollReveal direction="up" delay={100}>
                     {/* Heading */}
-                    <h2>
+                    <h2 className="!text-[#000000] dark:!text-[#E0E3E5] transition-colors duration-300">
                         A self-paced, results-driven course designed to help you
                     </h2>
                 </ScrollReveal>
@@ -53,7 +53,7 @@ export default function FeaturesTimeline() {
                                     </div>
 
                                     {/* Text */}
-                                    <p className="timeline-text text-section-dark-foreground text-base leading-relaxed max-w-xs">
+                                    <p className="timeline-text !text-[#000000] dark:!text-[#E0E3E5] transition-colors duration-300 text-base leading-relaxed max-w-xs">
                                         {item.text}
                                     </p>
                                 </div>

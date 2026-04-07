@@ -5,12 +5,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function PricingSection() {
     return (
-        <section id="pricing" className="pricing bg-[#08090A] py-20 px-4">
+        <section id="pricing" className="pricing bg-white dark:bg-[#08090A] py-20 px-4">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
                 {/* Left (58%) */}
                 <div className="w-full lg:w-[58%]">
                     <ScrollReveal direction="up" delay={100}>
-                        <div className="w-full h-[570px] bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 lg:p-10 flex flex-col justify-center">
+                        <div className="w-full h-[570px] bg-[#f5f6f7] dark:bg-[#111214] rounded-2xl p-8 lg:p-10 flex flex-col justify-center">
 
                             {/* Badge */}
                             <div className="badge-glow inline-flex items-center gap-2 w-fit mb-6">
@@ -18,12 +18,12 @@ export default function PricingSection() {
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
                                 </span>
-                                <span className="text-xs md:text-sm text-gray-300 font-medium">Introducing</span>
+                                <span className="text-xs md:text-sm !text-black dark:!text-[#d0d5d9] font-medium">Introducing</span>
                             </div>
 
 
-                            <h3 className="mb-3">The Deep Work Blueprint</h3>
-                            <p className="subtitle mb-8">What extra you will get if you enroll now</p>
+                            <h3 className="!text-[#000000] dark:!text-[#e0e3e5] mb-3">The Deep Work Blueprint</h3>
+                            <p className="subtitle !text-[#000000] dark:!text-[#d0d5d9] mb-8">What extra you will get if you enroll now</p>
 
                             <ul className="space-y-6">
                                 {[
@@ -38,7 +38,7 @@ export default function PricingSection() {
                                                 className="w-5 h-5"
                                             />
                                         </div>
-                                        <span className="item-text">{item}</span>
+                                        <span className="item-text !text-[#000000] dark:!text-[#aaaeb2]">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -54,16 +54,16 @@ export default function PricingSection() {
                                 {/* Price Row */}
                                 <div className="flex items-center justify-between mb-6">
                                     <div className="flex items-baseline gap-2">
-                                        <span className="main-price">$349</span>
-                                        <span className="discount line-through">$500</span>
+                                        <span className="main-price !text-black dark:!text-[#d0d5d9]">$349</span>
+                                        <span className="discount line-through !text-black dark:!text-[#aaaeb2]">$500</span>
                                     </div>
                                     <span className="discount-tag bg-[#2466F2] text-white px-3 py-1.5">
-                                30% off
-                            </span>
+                                        30% off
+                                    </span>
                                 </div>
 
                                 {/* Countdown */}
-                                <p className="text-gray-400 text-sm mb-8">
+                                <p className="!text-black dark:!text-[#d0d5d9] mb-8">
                                     30% off until <CountdownTimer />
                                 </p>
 
@@ -83,7 +83,7 @@ export default function PricingSection() {
                                                     className="w-5 h-5"
                                                 />
                                             </div>
-                                            <span className="item-text">{item}</span>
+                                            <span className="item-text !text-black dark:!text-[#aaaeb2]">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
