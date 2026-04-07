@@ -359,13 +359,13 @@ body {
 .lesson-question {
   padding: 32px calc(var(--spacing) * 5) 32px;
 }
-.sidebar-card {
+.sidebar-card, .price-row {
   border-radius: 24px;
   position: relative;
   border: 1px solid rgba(36, 102, 242, 0.1);
   padding: calc(var(--spacing) * 8);
 }
-.sidebar-card::before {
+.sidebar-card::before, .price-row::before {
   content: "";
   position: absolute;
   inset: 0;

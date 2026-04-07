@@ -49,13 +49,20 @@ export default function PricingSection() {
                 {/* Right (42%) */}
                 <div className="w-full lg:w-[42%]">
                     <ScrollReveal direction="up" delay={200}>
-                        <div className="price-row border border-white/10 rounded-2xl p-8 lg:p-10 flex flex-col justify-between">
+                        <div className="price-row rounded-2xl p-8 lg:p-10 flex flex-col justify-between h-[570px]">
                             <div>
                                 {/* Price Row */}
                                 <div className="flex items-center justify-between mb-6">
                                     <div className="flex items-baseline gap-2">
                                         <span className="main-price !text-black dark:!text-[#d0d5d9]">$349</span>
-                                        <span className="discount line-through !text-black dark:!text-[#aaaeb2]">$500</span>
+
+                                        {/* ✅ Wrapper for $500 - Relative positioning */}
+                                        <div className="relative inline-block">
+                                            <span className="discount !text-black dark:!text-[#aaaeb2]">$500</span>
+                                            <span
+                                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[4px] bg-red-500 rounded-full rotate-[5deg] pointer-events-none z-10"
+                                            />
+                                        </div>
                                     </div>
                                     <span className="discount-tag bg-[#2466F2] text-white px-3 py-1.5">
                                         30% off

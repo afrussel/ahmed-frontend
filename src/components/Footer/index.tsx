@@ -10,17 +10,17 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="footer-area bg-[#111214] text-white py-16 px-4">
+        <footer className="footer-area bg-[#f5f6f7] dark:bg-[#111214] text-white py-16 px-4">
             <div className="max-w-7xl mx-auto">
 
                 {/* Top Section: Brand + CTA Card */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-12">
                     {/* Left: Title + Subtitle */}
                     <div>
-                        <h3 className="text-3xl md:text-4xl leading-tight">
+                        <h3 className="text-3xl md:text-4xl leading-tight !text-[#000000] dark:!text-[#E0E3E5]">
                             The Deep<br />Work Blueprint
                         </h3>
-                        <p className="subtext">
+                        <p className="subtext !text-[#000000] dark:!text-[#E0E3E5]">
                             Master Focus &amp; Get More Done in Less Time
                         </p>
                     </div>
@@ -58,14 +58,14 @@ export default function Footer() {
                 <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 relative">
                     <div className="absolute top-0 left-0 right-0 glow-line" />
 
-                    <p className="copyright">
+                    <p className="copyright !text-[#000000] dark:!text-[#d0d5d9]">
                         © Copyright 2024, All Rights Reserved
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-                        <a href="#" className="footer-link hover:text-white transition-colors">Terms &amp; conditions</a>
-                        <a href="#" className="footer-link hover:text-white transition-colors">Refund policy</a>
-                        <Link href="#pricing" className="footer-link hover:text-white transition-colors">Pricing</Link>
-                        <a href="#" className="footer-link hover:text-white transition-colors">Support</a>
+                        <a href="#" className="footer-link hover:text-white !text-[#000000] dark:!text-[#d0d5d9] transition-colors">Terms &amp; conditions</a>
+                        <a href="#" className="footer-link hover:text-white !text-[#000000] dark:!text-[#d0d5d9] transition-colors">Refund policy</a>
+                        <Link href="#pricing" className="footer-link hover:text-white !text-[#000000] dark:!text-[#d0d5d9] transition-colors">Pricing</Link>
+                        <a href="#" className="footer-link hover:text-white !text-[#000000] dark:!text-[#d0d5d9] transition-colors">Support</a>
                     </div>
                 </div>
             </div>
