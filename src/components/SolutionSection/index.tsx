@@ -14,8 +14,7 @@ export default function SolutionSection() {
     return (
         <section className="bg-[#08090A] py-20 md:py-32 px-4">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
-
-                {/* Left (45%) */}
+                {/* Left (40%) */}
                 <div className="w-full lg:w-[40%] relative">
                     <ScrollReveal direction="left">
                         <div className="h-[642px] max-w-[520px] max-h-[642px] overflow-hidden">
@@ -32,7 +31,7 @@ export default function SolutionSection() {
                     </ScrollReveal>
                 </div>
 
-                {/* Right (55%) */}
+                {/* Right (60%) */}
                 <div className="w-full lg:w-[60%]">
                     <ScrollReveal direction="right" delay={200}>
                         <div className="flex flex-col justify-between w-full h-auto lg:h-[642px] min-h-[400px] lg:min-h-[642px] rounded-2xl lg:rounded-[24px] p-4 sm:p-6 lg:p-[40px] bg-[#0f0f0f] border border-white/10">

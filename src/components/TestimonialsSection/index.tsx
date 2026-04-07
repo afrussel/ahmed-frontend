@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
             if (w >= 1280) setSlidesToShow(4.5);
             else if (w >= 1024) setSlidesToShow(3);
             else if (w >= 768) setSlidesToShow(2);
-            else setSlidesToShow(1);
+            else setSlidesToShow(1.15);
         };
         handleResize();
         window.addEventListener("resize", handleResize);
@@ -64,12 +64,10 @@ export default function TestimonialsSection() {
     const handleTransitionEnd = () => {
         if (!isTransitioning) return;
 
-        // শেষের ক্লোন থেকে অরিজিনালে জাম্প
         if (activeIndex >= totalOriginal + cardsToShow) {
             setIsTransitioning(false);
             setActiveIndex(activeIndex - totalOriginal);
         }
-        // শুরুর ক্লোন থেকে অরিজিনালে জাম্প
         else if (activeIndex < cardsToShow) {
             setIsTransitioning(false);
             setActiveIndex(activeIndex + totalOriginal);
@@ -154,7 +152,7 @@ export default function TestimonialsSection() {
                                 className="flex-shrink-0 px-2"
                                 style={{ width: `${cardWidthPercent}%` }}
                             >
-                                <div className="h-[340px] md:h-[400px] rounded-2xl overflow-hidden relative bg-[#0f0f0f] border border-white/10 group">
+                                <div className="h-[400px] md:h-[400px] rounded-2xl overflow-hidden relative bg-[#0f0f0f] border border-white/10 group">
                                     {t.hasVideo && t.image ? (
                                         <div className="relative h-full">
                                             <Image
