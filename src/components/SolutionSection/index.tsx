@@ -7,8 +7,11 @@ export default function SolutionSection() {
     const testimonial1 = "/images/testimonial1.png";
     const testimonial2 = "/images/testimonial2.png";
     const testimonial3 = "/images/testimonial3.png";
+    const testimonial4 = "/images/testimonial-alex.jpg";
+    const testimonial5 = "/images/testimonial-mark.jpg";
+    const testimonial6 = "/images/testimonial-shah.jpg";
 
-    const topAvatars = [testimonial1, testimonial2, testimonial3];
+    const topAvatars = [testimonial4, testimonial5, testimonial6];
     const stackedThumbnails = [testimonial1, testimonial2, testimonial3];
 
     return (

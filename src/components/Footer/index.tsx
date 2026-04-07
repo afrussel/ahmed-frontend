@@ -5,9 +5,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Footer() {
     const testimonials = [
-        { src: "/images/testimonial1.png", alt: "Student testimonial 1" },
-        { src: "/images/testimonial2.png", alt: "Student testimonial 2" },
-        { src: "/images/testimonial3.png", alt: "Student testimonial 3" },
+        { src: "/images/testimonial-alex.jpg", alt: "Student testimonial 1" },
+        { src: "/images/testimonial-mark.jpg", alt: "Student testimonial 2" },
+        { src: "/images/testimonial-shah.jpg", alt: "Student testimonial 3" },
     ];
 
     return (

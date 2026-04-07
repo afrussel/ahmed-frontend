@@ -9,7 +9,7 @@ const testimonials = [
     { name: "Mark Davidson", role: "Software Developer", avatar: "/images/testimonial-mark.jpg", text: "I never realized how much distractions were holding me back. After applying the deep work techniques, I feel more in control of my time and my energy. My efficiency has doubled!", hasVideo: false },
     { name: "Tom David", role: "Entrepreneur", avatar: "/images/testimonial-tom.jpg", text: "", hasVideo: true, image: "/images/tom-video.jpg" },
     { name: "James Miller", role: "Entrepreneur", avatar: "/images/testimonial-miller.jpg", text: "Procrastination used to control my life. Until I discovered these deep work courses. Now I can concentrate on what matters most, and my productivity has skyrocketed.", hasVideo: false },
-    { name: "Sarah Johnson", role: "Product Manager", avatar: "/images/testimonial-tom.jpg", text: "The techniques in this course completely changed how I approach my workday.", hasVideo: false },
+    { name: "Sarah Johnson", role: "Product Manager", avatar: "/images/testimonial-shah.jpg", text: "The techniques in this course completely changed how I approach my workday.", hasVideo: false },
 ];
 
 export default function TestimonialsSection() {
@@ -179,8 +179,15 @@ export default function TestimonialsSection() {
 
                                             {/* Play Button */}
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <button className="h-14 w-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 hover:scale-110 transition-transform group-hover:bg-white/30">
-                                                    <Play className="h-6 w-6 text-white fill-white ml-1" />
+                                                <button className="flex items-center justify-center hover:scale-110 transition-transform">
+                                                    <Image
+                                                        src="/images/icons/play-button-small.svg"
+                                                        alt="Play video"
+                                                        width={24}
+                                                        height={24}
+                                                        className="h-14 w-14 object-contain"
+                                                        priority
+                                                    />
                                                 </button>
                                             </div>
 
