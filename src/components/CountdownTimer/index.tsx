@@ -32,7 +32,7 @@ export default function CountdownTimer() {
     }
 
     return (
-        <span className="text">
+        <span className="text !text-black dark:!text-[#d0d5d9] transition-colors duration-300">
             30% off until {timeLeft.d}d : {timeLeft.h}h : {timeLeft.m}m : {timeLeft.s}s
         </span>
     );

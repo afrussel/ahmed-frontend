@@ -10,7 +10,7 @@ const problemImages = [
 
 export default function ProblemSection() {
     return (
-        <section className="problem-section bg-[#08090A] py-20 md:py-32 px-4 text-center">
+        <section className="problem-section bg-white dark:bg-[#08090A] py-20 md:py-32 px-4 text-center">
             <div className="max-w-4xl mx-auto">
 
                 {/* Badge with ScrollReveal */}

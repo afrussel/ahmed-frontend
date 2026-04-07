@@ -58,15 +58,7 @@ export default function Navbar() {
 
                     {/* Right Side Actions */}
                     <div className="flex items-center gap-3">
-                        {/*<ThemeToggle />*/}
-                        <div className="flex items-center bg-section-dark-icon-bg rounded-full p-1 gap-1">
-                            <button className="h-7 w-7 rounded-full flex items-center justify-center bg-section-dark-icon-bg text-section-dark-foreground">
-                                <Moon className="h-3.5 w-3.5" />
-                            </button>
-                            <button className="h-7 w-7 rounded-full flex items-center justify-center text-section-dark-foreground">
-                                <Sun className="h-3.5 w-3.5" />
-                            </button>
-                        </div>
+                        <ThemeToggle />
                         <Link
                             href="#pricing"
                             className="common-btn hidden min-[981px]:inline-flex items-center justify-center px-5 py-2.5 hover:bg-[#2563eb] transition-all active:scale-[0.98]"

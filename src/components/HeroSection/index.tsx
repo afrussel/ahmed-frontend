@@ -107,7 +107,7 @@ export default function HeroSection() {
             {/* Horizontal accent line */}
             <div className="absolute top-24 left-0 right-0 glow-line" />
 
-            <div className="absolute inset-0 bottom-0 left-0 glow-bg" />
+            <div className="absolute inset-0 glow-bg bg-white dark:bg-[#08090A] transition-colors duration-300 pointer-events-none" />
 
             {/* Background Effects */}
             <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-t from-[#1245B3]/60 via-[#1245B3]/40 to-transparent pointer-events-none" />
@@ -117,7 +117,7 @@ export default function HeroSection() {
                 <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
 
                     {/* Countdown Badge */}
-                    <div className="badge-glow mb-8 inline-flex items-center gap-2">
+                    <div className="badge-glow mb-8 inline-flex items-center gap-2 !bg-white dark:!bg-[#171B21] transition-colors duration-300">
                       <span className="relative flex h-2 w-2 shrink-0">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]"></span>
@@ -128,7 +128,7 @@ export default function HeroSection() {
                     {/* Headline - GSAP Animated */}
                     <h1
                         ref={headlineRef}
-                        className="hero-title tracking-tight mb-4"
+                        className="hero-title tracking-tight mb-4 !text-[#000000] dark:!text-[#E0E3E5] transition-colors duration-300"
                     >
                         Master Focus & Get <br className="hidden md:block" />
                         More Done in Less Time
@@ -137,7 +137,7 @@ export default function HeroSection() {
                     {/* Subheadline - GSAP Animated */}
                     <p
                         ref={subheadlineRef}
-                        className="hero-subheadline"
+                        className="hero-subheadline !text-[#000000] dark:!text-[#AAAEB2] transition-colors duration-300"
                     >
                         A step-by-step system to eliminate procrastination, train your <br className="hidden md:block" /> brain for deep work, and boost productivity effortlessly.
                     </p>
@@ -152,7 +152,7 @@ export default function HeroSection() {
                         </Link>
                         <Link
                             href="#curriculum"
-                            className="common-btn-dark px-6 py-3 hover:bg-[#252525] transition-colors"
+                            className="common-btn-dark px-6 py-3 !bg-white dark:!bg-[#171B21] !text-black dark:!text-white hover:!bg-[#f5f5f5] dark:hover:!bg-[#252525] transition-colors duration-300"
                         >
                             Curriculum
                         </Link>

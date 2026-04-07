@@ -1,3 +1,4 @@
+@variant dark (&:where(.dark, .dark *));
 @import "tailwindcss";
 
 :root {
@@ -99,13 +100,11 @@ body {
 }
 .common-btn-dark {
   border-radius: 12px;
-  background-color: #171B21;
   font-family: 'SF Pro Display Medium', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
   line-height: 1.35;
-  color: #fff;
 }
 .navbar-text {
   font-family: 'SF Pro Display Regular', sans-serif;
@@ -116,7 +115,6 @@ body {
 }
 
 .badge-glow {
-  background-color: #171B21;
   border-radius: 12px;
   padding: 8px 16px;
   display: inline-flex;
@@ -147,7 +145,6 @@ body {
 }
 
 .badge-glow .text {
-  color: rgba(208, 213, 217, 1);
   font-size: 15px;
 }
 
@@ -211,7 +208,6 @@ body {
   background-image: url('/images/glow-effect.png');
   background-size: contain;
   background-position: bottom center;
-  background-color: #08090A;
 }
 
 .hero-title {
@@ -222,7 +218,6 @@ body {
   line-height: 1.15;
   letter-spacing: 0;
   text-align: center;
-  color: #E0E3E5;
   will-change: transform, opacity;
 }
 .hero-subheadline {
@@ -233,7 +228,6 @@ body {
   line-height: 1.35;
   letter-spacing: 0;
   text-align: center;
-  color: #AAAEB2;
   max-width: 42rem;
   margin-bottom: 2rem;
   margin-left: auto;
