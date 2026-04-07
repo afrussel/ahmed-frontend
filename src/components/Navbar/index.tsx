@@ -28,7 +28,7 @@ export default function Navbar() {
                 ? "bg-[#08090A]/90 backdrop-blur-md border-b border-white/10"
                 : "bg-transparent border-b border-transparent"
         }`}>
-            <div className="max-w-7xl mx-auto px-4 md:px-0 py-3">
+            <div className="max-w-7xl mx-auto px-4 md:px-4 lg:px-0 py-3">
                 <div className="flex items-center justify-between h-16">
 
                     {/* Logo */}
@@ -44,7 +44,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Nav Links */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden min-[981px]:flex items-center gap-8">
                         {links.map((l) => (
                             <Link
                                 key={l.label}
@@ -69,14 +69,14 @@ export default function Navbar() {
                         </div>
                         <Link
                             href="#pricing"
-                            className="common-btn hidden md:inline-flex items-center justify-center px-5 py-2.5 hover:bg-[#2563eb] transition-all active:scale-[0.98]"
+                            className="common-btn hidden min-[981px]:inline-flex items-center justify-center px-5 py-2.5 hover:bg-[#2563eb] transition-all active:scale-[0.98]"
                         >
                             Enroll now
                         </Link>
 
                         {/* Mobile Menu Toggle */}
                         <button
-                            className="md:hidden p-2 text-gray-300 hover:text-white"
+                            className="min-[981px]:hidden p-2 text-gray-300 hover:text-white"
                             onClick={() => setOpen(!open)}
                             aria-label="Toggle menu"
                         >
@@ -88,7 +88,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Dropdown */}
             {open && (
-                <div className="md:hidden absolute top-16 left-0 right-0 bg-[#050505] border-b border-white/10 p-4 space-y-2 shadow-2xl">
+                <div className="min-[981px]:hidden absolute top-16 left-0 right-0 bg-[#050505] border-b border-white/10 p-4 space-y-2 shadow-2xl">
                     {links.map((l) => (
                         <Link
                             key={l.label}
