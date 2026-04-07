@@ -150,6 +150,7 @@ export default function HeroSection() {
                         >
                             Enroll now
                         </Link>
+
                         <Link
                             href="#curriculum"
                             className="common-btn-dark px-6 py-3 !bg-white dark:!bg-[#171B21] !text-black dark:!text-white hover:!bg-[#f5f5f5] dark:hover:!bg-[#252525] transition-colors duration-300"
