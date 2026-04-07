@@ -399,7 +399,7 @@ body {
   line-height: 135%;
   color: #AAAEB2;
 }
-.sidebar-card .round-icon {
+.sidebar-card .round-icon, .pricing .round-icon {
   width: 32px;
   height: 32px;
   background-color: #171b21;
@@ -408,7 +408,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.sidebar-card .round-icon img {
+.sidebar-card .round-icon img, .pricing .round-icon img {
   width: 16px;
   height: 16px;
 }
@@ -453,6 +453,56 @@ body {
   line-height: 135%;
   color: #AAAEB2;
 }
+
+.pricing h3 {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.15;
+  color: #E0E3E5;
+  padding-bottom: 5px;
+}
+.pricing .subtitle {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #d0d5d9;
+  padding-top: 10px;
+}
+.pricing .item-text {
+  font-family: 'SF Pro Display Regular', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  color: #AAAEB2;
+}
+.price-row .main-price {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #d0d5d9;
+}
+.price-row .discount {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #AAAEB2;
+}
+.discount-tag {
+  
+}
+
+
 
 .footer-box {
   flex-direction: column;
