@@ -499,9 +499,27 @@ body {
   color: #AAAEB2;
 }
 .discount-tag {
-  
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
 }
-
+.cta-btn {
+  font-family: 'SF Pro Display Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+}
 
 
 .footer-box {

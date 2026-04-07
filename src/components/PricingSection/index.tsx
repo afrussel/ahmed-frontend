@@ -66,18 +66,22 @@ export default function PricingSection() {
                                 "Live Q&As - Expert guidance & accountability.",
                                 "Exclusive Community - Connect with others."
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <div className="mt-1 w-6 h-6 rounded-full bg-[#111] border border-white/10 flex items-center justify-center flex-shrink-0">
-                                        <Check size={14} className="text-[#3b82f6]" />
+                                <li key={i} className="flex items-center gap-3">
+                                    <div className="round-icon bg-section-dark-icon-bg flex items-center justify-center">
+                                        <img
+                                            src="/images/icons/t3.svg"
+                                            alt="Price icon"
+                                            className="w-5 h-5"
+                                        />
                                     </div>
-                                    <span className="text-gray-300 text-sm leading-relaxed">{item}</span>
+                                    <span className="item-text">{item}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
                     {/* CTA Button */}
-                    <button className="w-full bg-[#3b82f6] hover:bg-[#2563eb] text-white font-semibold py-3.5 rounded-xl transition-all active:scale-[0.98]">
+                    <button className="cta-btn w-full bg-[#2466F2] hover:bg-[#2563eb] text-white py-3.5 transition-all active:scale-[0.98]">
                         Enroll now
                     </button>
                 </div>
