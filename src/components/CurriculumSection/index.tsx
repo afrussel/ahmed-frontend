@@ -101,7 +101,7 @@ export default function CurriculumSection() {
                                                 alt="Collapse"
                                                 width={32}
                                                 height={32}
-                                                className="shrink-0"
+                                                className="shrink-0 transition-all duration-300 filter brightness-0 dark:brightness-100 dark:filter-none"
                                             />
                                         ) : (
                                             <Image
@@ -109,7 +109,7 @@ export default function CurriculumSection() {
                                                 alt="Expand"
                                                 width={32}
                                                 height={32}
-                                                className="shrink-0"
+                                                className="shrink-0 transition-all duration-300 filter brightness-0 dark:brightness-100 dark:filter-none"
                                             />
                                         )}
                                     </button>
@@ -140,7 +140,7 @@ export default function CurriculumSection() {
 
                     {/* Right: Sidebar Card */}
                     <ScrollReveal direction="up" delay={200}>
-                        <div className="sidebar-card lg:sticky lg:top-24 self-start !bg-[#f5f6f7] dark:!bg-[#0a0a0a] transition-colors duration-300">
+                        <div className="sidebar-card self-start !bg-[#f5f6f7] dark:!bg-[#0a0a0a] transition-colors duration-300">
                             <h3 className="!text-[#000000] dark:!text-[#d0d5d9]">Not only video lessons!</h3>
                             <div className="items-area flex flex-col">
                                 {sidebarItems.map((item, idx) => (
@@ -158,7 +158,7 @@ export default function CurriculumSection() {
                             </div>
                             <Link
                                 href="#pricing"
-                                className="w-full bg-[#2466F2] hover:bg-[#2563eb] text-white font-semibold py-3 rounded-lg text-center transition-all active:scale-[0.98] inline-block"
+                                className="w-full bg-[#2466F2] hover:bg-[#2563eb] text-white py-3 rounded-lg text-center transition-all active:scale-[0.98] inline-block"
                             >
                                 Enroll now
                             </Link>
